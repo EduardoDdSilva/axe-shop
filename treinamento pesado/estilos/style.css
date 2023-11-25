@@ -1,0 +1,203 @@
+@import url(main.css);
+@import url(part2.css);
+
+:root {
+    --texto-branco: #fff;
+    --texto-cinza: #C0C0C0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #161616;
+    color: var(--texto-branco);
+    font-family: 'roboto' sans-serif;
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalho {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    padding: 2.5em 9em;
+    position: relative;
+    top: 0;
+    background: transparent;
+    z-index: 1;
+    transition: 1s;
+}
+
+/* -----script-cabecalho */
+
+.cabecalho.rolagem {
+    background-color: #fff;
+    max-width: 93%;
+    width: 100%;
+    padding: 20px 4%;
+    position: fixed;
+}
+
+.cabecalho.rolagem a, .cabecalho.rolagem .cabecalho_logo {
+    color: #000;
+}
+
+/* -------script-end */
+
+.cabecalho_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho_linkgeral {
+    display: flex;
+    gap: 66px;
+}
+
+.cabecalho_content_links {
+    display: flex;
+    gap: 44px;
+}
+
+.cabecalho_logo {
+    font-size: 26px;
+    color: var(--texto-branco);
+    font-weight: 700;
+}
+
+.cabecalho_link {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cabecalho_link:hover {
+    text-decoration: underline 2px;
+}
+
+.sign {
+    text-decoration: none;
+    color: var(--texto-branco);
+    border-radius: 25px;
+    border: solid 0.5px #333;
+    padding: 0.7em 2em;
+    margin-right: 38px;
+}
+
+.sign:hover {
+    color: #111;
+    background: #C0C0C0;
+}
+
+.login {
+    text-decoration: none;
+    color: var(--texto-branco);
+}
+
+.login:hover {
+    color: rgb(69, 253, 69);
+}
+
+.bi-list {
+    display: none;
+}
+
+/* ------------tela-tablet--------------- */
+
+@media screen and (max-width: 1600px) {
+    .cabecalho {
+        padding: 2.5em 5em;
+    }
+}
+
+/* ------------tela-celular-------------- */
+
+@media screen and (max-width: 940px) {
+
+    body {
+        background: #fff;
+    }
+
+    :root {
+        --texto-branco: #000;
+        --texto-cinza: #5C5C5C;
+    }
+    
+    /* -----------script-modificação-------- */
+
+    .cabecalho_linkgeral {
+        display: none;
+        position: absolute;
+        background: #000;
+        padding: 100px 4em;
+        height: 100%;
+        top: 0;
+        opacity: 92%;
+        transition: left 1s;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .cabecalho_content_links {
+        flex-direction: column;
+    }
+    
+    .cabecalho_login {
+        display: flex;
+        gap: 20px;
+        margin-top: 180%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sign, .login {
+        color: #fff;
+        margin: 0;
+        right: 23%;
+        position: relative;
+    }
+
+    /* -----------script-end---------- */
+
+    .cabecalho_logo {
+        margin: 0 1em;
+    }
+
+    .bi-list {
+        display: block;
+        font-size: 30px;
+        margin: 0 1em;
+        position: absolute;
+        right: 1%;
+    }
+
+    .expandir {
+        padding: 500vh;
+        position: fixed;
+        z-index: 1;
+        overflow: hidden;
+        margin: 0;
+        top: 0;
+    }
+
+    .cabecalho {
+        padding: 2.5em 0;
+        display: block;
+    }
+
+    .cabecalho.rolagem a{
+        color: #fff;
+    }
+
+    .cabecalho.rolagem {
+        padding: 20px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}

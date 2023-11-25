@@ -1,0 +1,27 @@
+{
+    "name": "portifolio",
+    "description": "Teste de programação a fins de aprimorar e expandir um portifolio",
+    "keywords": [],
+    "author": "Eduardo Duarte da Silva <eduduarte971@gmail.com> (Heritage)",
+    "license": "ISC",
+    "engines": {
+        "node": "14.x"
+      },
+      "scripts": {
+        "start": "node script.js"
+      },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/EduardoDdSilva/Heritage-test.git"
+    },
+    "bugs": {
+      "url": "https://github.com/EduardoDdSilva"
+    },
+    "homepage": "url",
+    "dependencies": {
+        "package": "^0.1.1"
+      },
+      "devDependencies": {
+        "testpackage": "~0.1.1"
+      }
+  }
